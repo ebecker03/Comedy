@@ -1,3 +1,32 @@
-<p>
-  home works!
-</p>
+<h1>Joke generator</h1>
+
+<div>
+  <h2>Joke Categories</h2>
+  <div>
+    <h3>Dad Jokes</h3>
+  </div>
+  <div>
+    <a [routerLink]="['/dad-jokes']">test</a>
+  </div>
+  <div>
+    <h3>Chuck Jokes</h3>
+  </div>
+  <div>
+    <a [routerLink]="['/chuck-jokes']">test</a>
+  </div>
+  <div>
+    <h3>Other Jokes</h3>
+  </div>
+  <div>
+    <a [routerLink]="['/other-jokes']">test</a>
+  </div>
+</div>
+
+<button (click)="getJoke()">click for joke of day</button>
+
+<div>
+  {{JOD.joke}}
+  {{JOD.setup}}
+  <br>
+  {{JOD.delivery}}
+</div>

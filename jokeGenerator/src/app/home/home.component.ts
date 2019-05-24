@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OtherJokesService } from '../services/other-jokes.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  JOD: any;
+
+  constructor(private jokeOfDay: OtherJokesService) { }
+
+  // getJokeOfDay(){
+  //   this.jokeOfDay.JOD().subscribe(response=> console.log(response));
+  // }
+
+  getJoke(){
+    this.jokeOfDay.randomJokes().subscribe(response=>this.JOD = response);
+    this.jokeOfDay.randomJokes().subscribe(response=>console.log(response));
+  }
 
   ngOnInit() {
   }
