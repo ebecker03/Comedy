@@ -4,7 +4,7 @@
     <div>
       <label for="username">Username</label>
       <input required minlength="3" maxlength="15" type="text" #username="ngModel" class="form-control" id="username" placeholder="Username" [(ngModel)]="signup.username" name="username">
-      {{signup.username}}
+      remove this:{{signup.username}}
       <div *ngIf="username.errors && (username.dirty || username.touched)">
           Username must be between 3 and 15 characters.
         </div>
@@ -13,7 +13,7 @@
     <div>
         <label for="email">Email</label>
         <input required email type="email" class="form-control" id="email" #email="ngModel" placeholder="Email" [(ngModel)]="signup.email" name="email">
-        {{signup.email}}
+        remove this:{{signup.email}}
         <div *ngIf="email.errors && (email.dirty || email.touched)">
             Valid email is required.
           </div>
@@ -22,7 +22,7 @@
       <div>
           <label for="password">Password</label>
           <input required minlength="3" maxlength="15" type="password" class="form-control" #password="ngModel" id="password" placeholder="Password" [(ngModel)]="signup.password" name="password">
-          {{signup.password}}
+          remove this:{{signup.password}}
           <div *ngIf="password.errors && (password.dirty || password.touched)">
             Password must be between 3 and 15 characters.
           </div>
@@ -30,6 +30,6 @@
 
         <button type="submit" *ngIf="password.valid && email.valid && username.valid">Submit</button>
   </form>
-
+  <br>
   <a [routerLink]="['/home']">Home</a>
 </div>

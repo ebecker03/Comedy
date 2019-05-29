@@ -12,6 +12,7 @@ import { OtherJokesComponent } from './other-jokes/other-jokes.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
