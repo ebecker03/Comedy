@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<div>
+    <h1>Login</h1>
+    <form #signup="ngForm">
+      <div>
+        <label for="username">Username</label>
+        <input required minlength="3" maxlength="15" type="text" #username="ngModel" class="form-control" id="username" placeholder="Username" [(ngModel)]="signup.username" name="username">
+        {{signup.username}}
+        <div *ngIf="username.errors && (username.dirty || username.touched)">
+            Username must be between 3 and 15 characters.
+          </div>
+      </div>
+  
+        <div>
+            <label for="password">Password</label>
+            <input required minlength="3" maxlength="15" type="password" class="form-control" #password="ngModel" id="password" placeholder="Password" [(ngModel)]="signup.password" name="password">
+            {{signup.password}}
+            <div *ngIf="password.errors && (password.dirty || password.touched)">
+              Password must be between 3 and 15 characters.
+            </div>
+          </div>
+  
+          <button type="submit" *ngIf="password.valid && username.valid">Submit</button>
+    </form>
+  </div>
