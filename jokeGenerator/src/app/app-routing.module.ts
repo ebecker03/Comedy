@@ -6,6 +6,7 @@ import { ChuckJokesComponent } from './chuck-jokes/chuck-jokes.component';
 import { OtherJokesComponent } from './other-jokes/other-jokes.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'other-jokes', component: OtherJokesComponent},
   {path: 'sign-up', component: SignupComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'welcome', component: WelcomeComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

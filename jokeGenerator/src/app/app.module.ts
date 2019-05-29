@@ -11,6 +11,7 @@ import { ChuckJokesComponent } from './chuck-jokes/chuck-jokes.component';
 import { OtherJokesComponent } from './other-jokes/other-jokes.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     ChuckJokesComponent,
     OtherJokesComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
