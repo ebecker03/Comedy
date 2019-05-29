@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+
+
   constructor() { }
+
+  submitted = false;
+
+  onSubmit() {this.submitted = true;}
 
   ngOnInit() {
   }
